@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Documentation</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    }
+    header {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    }
+    .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    }
+    h2 {
+    color: #4caf50;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 10px;
+    }
+    .endpoint {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    }
+    .endpoint h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    }
+    .method {
+    font-weight: bold;
+    color: #4caf50;
+    }
+    .url,
+    .parameters,
+    .responses,
+    .description {
+    margin: 10px 0;
+    font-size: 0.9em;
+    }
+    .code {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    }
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    }
+    th,
+    td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    }
+    th {
+    background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>MockerDB</h1>
+  <p>
+    This document covers how we are able to access any of our tables in our
+    DB and add new data into it
+  </p>
+</header>
+<div class="container">
+  <h1>MySQL</h1>
+  <h2>Endpoints</h2>
+  <!-- Endpoint 1 -->
+  <div class="endpoint">
+    <h3>1. MetaData Fetching</h3>
+    <p>
+      <span class="method">POST</span>
+      <span class="url">/api/fetchMetaData</span>
+    </p>
+    <div class="description">
+      <p>
+        Sends the connection data of the user and fetches the metadata of
+        the specific table from the database
+      </p>
+    </div>
+    <div class="parameters">
+      <h4>Parameters</h4>
+      <p>Adds one or more new entries into the specified table with the given input values.</p>
+      <h4>JSON Body Parameter</h4>
+      <p>The endpoint expects a JSON object with the following structure:</p>
+      <pre class="code">
+
+  {
+    database_name: databaseName,
+    database_host: databaseHost,
+    database_username: databaseUserName,
+    database_password: databasePassword,
+    database_tablename: databaseTableName
+  }
+
+          </pre>
+      <!-- JSON Field Descriptions -->
+      <h4>Fields</h4>
+      <table>
+        <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>database_name</td>
+          <td>String</td>
+          <td>Name of the database to access</td>
+        </tr>
+        <tr>
+          <td>database_host</td>
+          <td>String</td>
+          <td>Host url of the database</td>
+        </tr>
+        <tr>
+          <td>database_password</td>
+          <td>String</td>
+          <td>Password of the database</td>
+        </tr>
+        <tr>
+          <td>database_tablename</td>
+          <td>String</td>
+          <td>Name of the table to access from the specified database</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Response Details -->
+    <div class="responses">
+      <h4>Responses</h4>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Message</th>
+        </tr>
+        <tr>
+          <td>200</td>
+          <td>Table metadata is fetched successfully for the specified table </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h4>JSON Response</h4>
+            <p>The endpoint returns a JSON object with the following structure:</p>
+            <pre class="code">
+
+
+columnMetadataMap = [
+ 0 = {
+  "nullable" -> "NO"
+  "column_name" -> "username"
+  "data_type" -> "varchar"
+  "default_value" -> null
+  "type" -> "text"
+  "primary_key" -> "true"
+ },
+ 1 = {
+  "nullable" -> "YES"
+  "column_name" -> "password"
+  "data_type" -> "varchar"
+  "default_value" -> null
+  "type" -> "text"
+  "primary_key" -> "false"
+ }
+]
+
+              </pre>
+          </td>
+        </tr>
+        <!-- <tr><td>400</td><td>Invalid data format</td></tr> -->
+      </table>
+    </div>
+  </div>
+  <!-- Endpoint 2 -->
+  <div class="endpoint">
+    <h3>2. Populate data</h3>
+    <p>
+      <span class="method">POST</span>
+      <span class="url">/api/populateMockData</span>
+    </p>
+    <div class="description">
+      <p>Adds one or more new entries into the specified table with the given input values.</p>
+    </div>
+    <div class="parameters">
+      <h4>Parameters</h4>
+      <h4>JSON Body Parameter</h4>
+      <p>The endpoint expects a JSON object with the following structure:</p>
+      <pre class="code">
+         [
+          "connection" =  {
+            database_name: databaseName,
+            database_host: databaseHost,
+            database_username: databaseUserName,
+            database_password: databasePassword,
+            database_tablename: databaseTableName
+          },
+          columnName1 = {
+            selected_type: selectedType [range | text | number],
+            Incrementer : incrementValue (IF selected_type is "range"),
+            value : value [filled | empty]
+          },
+          columnName2 = {
+            selected_type: selectedType [range | text | number],
+            value : value [filled | empty]
+          }
+         ]
+        </pre>
+      <!-- JSON Field Descriptions -->
+      <h4>Fields</h4>
+      <table>
+        <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>ColumnName</td>
+          <td>String</td>
+          <td>Name of the column of the specified database</td>
+        </tr>
+        <tr>
+          <td>Selected Value</td>
+          <td>[ Range | Random String | Boolean | Integer ]</td>
+          <td>Selected type from the dropdown</td>
+        </tr>
+        <tr>
+          <td>incrementValue(only for range type)</td>
+          <td>Integer</td>
+          <td>the value difference between the elements in the range</td>
+        </tr>
+        <tr>
+          <td>Value</td>
+          <td>[ Integer | String | Range ]</td>
+          <td>Value to be entered by the user</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Response Details -->
+    <div class="responses">
+      <h4>Responses</h4>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Message</th>
+        </tr>
+        <tr>
+          <td>200</td>
+          <td>Data populated in MySql successfully</td>
+        </tr>
+        <tr>
+          <td>400</td>
+          <td>Invalid data format</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- MySQL Delete Endpoint -->
+  <div class="endpoint">
+    <h3>3. Delete Mock Data</h3>
+    <p>
+      <span class="method">DELETE</span>
+      <span class="url">/api/deleteMockData</span>
+    </p>
+    <div class="description">
+      <p>Deletes all mock data entries from the specified table while preserving the table structure.</p>
+    </div>
+    <div class="parameters">
+      <h4>Parameters</h4>
+      <h4>JSON Body Parameter</h4>
+      <p>The endpoint expects a JSON object with the following structure:</p>
+      <pre class="code">
+{
+  database_name: databaseName,
+  database_host: databaseHost,
+  database_username: databaseUserName,
+  database_password: databasePassword,
+  database_tablename: databaseTableName
+}
+         </pre>
+      <!-- JSON Field Descriptions -->
+      <h4>Fields</h4>
+      <table>
+        <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>database_name</td>
+          <td>String</td>
+          <td>Name of the database to access</td>
+        </tr>
+        <tr>
+          <td>database_host</td>
+          <td>String</td>
+          <td>Host url of the database</td>
+        </tr>
+        <tr>
+          <td>database_username</td>
+          <td>String</td>
+          <td>Username for database authentication</td>
+        </tr>
+        <tr>
+          <td>database_password</td>
+          <td>String</td>
+          <td>Password for database authentication</td>
+        </tr>
+        <tr>
+          <td>database_tablename</td>
+          <td>String</td>
+          <td>Name of the table to delete data from</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Response Details -->
+    <div class="responses">
+      <h4>Responses</h4>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Message</th>
+        </tr>
+        <tr>
+          <td>200</td>
+          <td>Mock data successfully deleted from MySQL table</td>
+        </tr>
+        <tr>
+          <td>400</td>
+          <td>Invalid request format or connection parameters</td>
+        </tr>
+        <tr>
+          <td>404</td>
+          <td>Table or database not found</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container">
+  <h1>Cassandra</h1>
+  <h2>Endpoints</h2>
+  <!-- Endpoint 1 -->
+  <div class="endpoint">
+    <h3>1. Fetch table metadata</h3>
+    <p>
+      <span class="method">POST</span> <span class="url">/api/fetchCassandraMetaData</span>
+    </p>
+    <div class="description">
+      <p>Fetches the data of the cassandra keyspaces such as the partition keys, clustering keys and other non-key columns .</p>
+    </div>
+    <div class="parameters">
+      <h4>Parameters</h4>
+      <h4>JSON Body Parameter</h4>
+      <p>The endpoint expects a JSON object with the following structure:</p>
+      <pre class="code">
+            {
+              key_space: keySpace,
+              hostname: hostname,
+              table_name: tableName
+            }
+          </pre>
+      <!-- JSON Field Descriptions -->
+      <h4>Fields</h4>
+      <table>
+        <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>key_space</td>
+          <td>String</td>
+          <td>Name of the keyspace</td>
+        </tr>
+        <tr>
+          <td>hostname</td>
+          <td>String</td>
+          <td>url or the address of the host</td>
+        </tr>
+        <tr>
+          <td>table_name</td>
+          <td>String</td>
+          <td>Name of the table in the keyspace</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Response Details -->
+    <div class="responses">
+      <h4>Responses</h4>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Message</th>
+        </tr>
+        <tr>
+          <td>200</td>
+          <td>Table meta data fetched from the database</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h4>JSON Response for the above status code</h4>
+            <p>The endpoint returns a JSON object with the following structure:</p>
+            <pre class="code">
+              [
+                {
+                  "is_partition_key": "true",
+                  "column_name": "publisher",
+                  "data_type": "TEXT",
+                  "is_clustering_key": "false"
+                },
+                {
+                  "is_partition_key": "false",
+                  "column_name": "id",
+                  "data_type": "INT",
+                  "is_clustering_key": "true"
+                },
+                {
+                  "is_partition_key": "false",
+                  "column_name": "name",
+                  "data_type": "TEXT",
+                  "is_clustering_key": "false"
+                }
+              ]
+
+              </pre>
+          </td>
+        </tr>
+        <tr>
+          <td>400</td>
+          <td>Invalid data format</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Endpoint 2 -->
+  <div class="endpoint">
+    <h3>2. Populate table</h3>
+    <p>
+      <span class="method">GET</span>
+      <span class="url">/api/populateCassMockData</span>
+    </p>
+    <div class="description">
+      <p>Adds one or more new entries into the specified table with the given input values.</p>
+    </div>
+    <div class="parameters">
+      <h4>Parameters</h4>
+      <h4>JSON Body Parameter</h4>
+      <p>The endpoint expects a JSON object with the following structure:</p>
+      <pre class="code">
+          {
+            columnName1 = {
+              selected_type: selectedType [range | text | number],
+              Incrementer : incrementValue (IF selected_type is "range"),
+              value : value [filled | empty]
+            },
+            columnName2 = {
+              selected_type: selectedType [range | text | number],
+              value : value [filled | empty]
+            },
+            "connection" : {
+              "key_space" : keyspace,
+              "hostname" : "localhost",
+              "table_name" : tableName
+            }
+          }
+        </pre>
+      <!-- JSON Field Descriptions -->
+      <h4>Fields</h4>
+      <table>
+        <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>key_space</td>
+          <td>String</td>
+          <td>Name of the keyspace</td>
+        </tr>
+        <tr>
+          <td>hostname</td>
+          <td>String</td>
+          <td>url or the address of the host</td>
+        </tr>
+        <tr>
+          <td>table_name</td>
+          <td>String</td>
+          <td>Name of the table in the keyspace</td>
+        </tr>
+        <tr>
+          <td>ColumnName</td>
+          <td>String</td>
+          <td>Name of the column in the specified database</td>
+        </tr>
+        <tr>
+          <td>Selected Value</td>
+          <td>[ Range | Random String | Boolean | Integer ]</td>
+          <td>Selected type from the dropdown</td>
+        </tr>
+        <tr>
+          <td>incrementValue(only for range type)</td>
+          <td>Integer</td>
+          <td>the value difference between the elements in the range</td>
+        </tr>
+        <tr>
+          <td>Value</td>
+          <td>[ Integer | String | Range ]</td>
+          <td>Value to be entered by the user</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Response Details -->
+    <div class="responses">
+      <h4>Responses</h4>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Message</th>
+        </tr>
+        <tr>
+          <td>200</td>
+          <td>Data populated in Cassandra successfully</td>
+        </tr>
+        <tr>
+          <td>400</td>
+          <td>Invalid data format</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Cassandra Delete Endpoint -->
+  <div class="endpoint">
+    <h3>3. Delete Mock Data</h3>
+    <p>
+      <span class="method">DELETE</span>
+      <span class="url">/api/deleteCassMockData</span>
+    </p>
+    <div class="description">
+      <p>Removes all mock data entries from the specified Cassandra table while maintaining the table structure.</p>
+    </div>
+    <div class="parameters">
+      <h4>Parameters</h4>
+      <h4>JSON Body Parameter</h4>
+      <p>The endpoint expects a JSON object with the following structure:</p>
+      <pre class="code">
+ {
+   columnName1 = {
+     selected_type: selectedType [range | text | number],
+     Incrementer : incrementValue (IF selected_type is "range"),
+     value : value [filled | empty]
+   },
+   columnName2 = {
+     selected_type: selectedType [range | text | number],
+     value : value [filled | empty]
+   },
+   "connection" : {
+     "key_space" : keyspace,
+     "hostname" : "localhost",
+     "table_name" : tableName
+   }
+ }
+</pre>
+      <h4>Note: </h4>
+      <p>primary key column is mandatory, others are optional</p>
+      <!-- JSON Field Descriptions -->
+      <h4>Fields</h4>
+      <table>
+        <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>key_space</td>
+          <td>String</td>
+          <td>Name of the keyspace</td>
+        </tr>
+        <tr>
+          <td>hostname</td>
+          <td>String</td>
+          <td>url or the address of the host</td>
+        </tr>
+        <tr>
+          <td>table_name</td>
+          <td>String</td>
+          <td>Name of the table in the keyspace</td>
+        </tr>
+        <tr>
+          <td>ColumnName</td>
+          <td>String</td>
+          <td>Name of the column in the specified database</td>
+        </tr>
+        <tr>
+          <td>Selected Value</td>
+          <td>[ Range | Random String | Boolean | Integer ]</td>
+          <td>Selected type from the dropdown</td>
+        </tr>
+        <tr>
+          <td>incrementValue(only for range type)</td>
+          <td>Integer</td>
+          <td>the value difference between the elements in the range</td>
+        </tr>
+        <tr>
+          <td>Value</td>
+          <td>[ Integer | String | Range ]</td>
+          <td>Value to be entered by the user</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Response Details -->
+    <div class="responses">
+      <h4>Responses</h4>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Message</th>
+        </tr>
+        <tr>
+          <td>200</td>
+          <td>Mock data successfully deleted from Cassandra table</td>
+        </tr>
+        <tr>
+          <td>400</td>
+          <td>Invalid request format or connection parameters</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

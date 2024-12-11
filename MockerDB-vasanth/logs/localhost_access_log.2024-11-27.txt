@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:03:27 -0800] "GET /MockerDB-vasanth HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:03:28 -0800] "GET /favicon.ico HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:06:58 -0800] "GET /MockerDB-vasanth HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:06:59 -0800] "GET /favicon.ico HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:11:56 -0800] "GET /MockerDB-vasanth HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:11:58 -0800] "GET /MockerDB-vasanth/ HTTP/1.1" 200 5788
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:11:58 -0800] "GET /favicon.ico HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:13:23 -0800] "GET /MockerDB-vasanth/ HTTP/1.1" 200 916
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:13:23 -0800] "GET /MockerDB-vasanth/css/style.css HTTP/1.1" 200 4004
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:13:23 -0800] "GET /MockerDB-vasanth/js/index.js HTTP/1.1" 200 1472
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:13:23 -0800] "GET /MockerDB-vasanth/mysql.html?_=1732713203737 HTTP/1.1" 200 2019
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:13:23 -0800] "GET /MockerDB-vasanth/js/mysql.js HTTP/1.1" 200 11537
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:13:25 -0800] "GET /MockerDB-vasanth/cassandra.html?_=1732713203738 HTTP/1.1" 200 1319
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:13:25 -0800] "GET /MockerDB-vasanth/js/cassandra.js HTTP/1.1" 200 9785
+0:0:0:0:0:0:0:1 - - [27/Nov/2024:05:13:25 -0800] "GET /MockerDB-vasanth/docs.html?_=1732713203739 HTTP/1.1" 200 17853

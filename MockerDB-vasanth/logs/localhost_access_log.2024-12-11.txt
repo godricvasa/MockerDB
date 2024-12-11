@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [11/Dec/2024:04:00:58 -0800] "GET /MockerDB-vasanth HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Dec/2024:04:00:59 -0800] "GET /MockerDB-vasanth/ HTTP/1.1" 200 916
+0:0:0:0:0:0:0:1 - - [11/Dec/2024:04:00:59 -0800] "GET /MockerDB-vasanth/css/style.css HTTP/1.1" 200 4004
+0:0:0:0:0:0:0:1 - - [11/Dec/2024:04:00:59 -0800] "GET /MockerDB-vasanth/js/index.js HTTP/1.1" 200 1472
+0:0:0:0:0:0:0:1 - - [11/Dec/2024:04:00:59 -0800] "GET /favicon.ico HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [11/Dec/2024:04:00:59 -0800] "GET /MockerDB-vasanth/mysql.html?_=1733918459386 HTTP/1.1" 200 2019
+0:0:0:0:0:0:0:1 - - [11/Dec/2024:04:00:59 -0800] "GET /MockerDB-vasanth/js/mysql.js HTTP/1.1" 200 11537

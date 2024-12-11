@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cassandra Mock Data Populator</title>
+    
+     <script src="js/cassandra.js"></script>
+</head>
+<body>
+<h1>Cassandra Mock Data Populator</h1>
+  <form id="firstCassForm" class="myForm width40">
+		  <div class="table-form">
+		  <div class="row">
+			<div class="cell">Cassandra Host</div>
+		    <div class="cell"><input class="width90 margin-left0" type="text" id="hostname" name="hostname" value="localhost"></div>
+		    <div class="cell">Schema Name:</div>
+		    <div class="cell"><input type="text" id="key_space" name="key_space" value="site24x7"></div>
+		  </div>
+		  <div class="row">
+		    <div class="cell">Table Name</div>
+		    <div class="cell" ><input type="text" class="width90 margin-left0" id="table_name" name="table_name" value="wm_current_status"></div>
+		    <div class="cell"><button id="cass-submit">Submit</button></div>
+		  </div>
+		</div>
+	</form>
+	<p id="cassDBInfo"></p>
+    <form id="cassForm" class="cassForm width40">
+        <!-- form fields will be populated here -->
+        <div class="table" id="cassTopDiv"></div>
+         <button id="cassFormSubmit" type="submit" style="display:none;">Submit</button>
+		<button id="delete" type="submit">Delete</button>
+    </form>
+<div id="errorDiv-cass"></div>
+</body>
+</html>

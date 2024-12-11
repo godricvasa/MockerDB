@@ -1,0 +1,4 @@
+Dec 11, 2024 4:00:52 AM org.apache.tomcat.util.descriptor.web.WebXml setVersion
+WARNING: Unknown version string [6.0]. Default version will be used.
+Dec 11, 2024 4:00:55 AM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.

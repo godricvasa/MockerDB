@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+#myForm, .myForm {
+    width: 60%;
+    margin: 0 5%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cassForm {
+    width: 60%;
+    margin: 0 5%;
+    padding: 10px;
+}
+
+h1, h2, h3, h4
+{
+	margin-left: 5%;
+}
+
+p
+{
+	margin-left: 5%;
+}
+
+.width40{
+	width: 40%;
+}
+.width90{
+	width: 90% !important;
+}
+.margin-left0{
+	margin-left:0px !important;
+}
+.margin-left5{
+	margin-left:5px !important;
+}
+
+/*label {
+    font-weight: bold;
+    margin: 1px 25px 10px 1px;
+}*/
+
+input[type="text"], input[type="email"], input[type="float"],input[type="password"], input[type="number"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 1px 5px 1px 5px;
+}
+
+textarea {
+	width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 1px 5px 1px 5px;
+}
+
+button {
+	 width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 5px 1px 5px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+/*#myForm label, #myForm input[type="text"], #myForm input[type="bigint"], #myForm input[type="int"], #myForm input[type="password"],#myForm input[type="number"], #myForm select {
+    margin-bottom: 20px;
+}*/
+
+/*#myForm label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}*/
+
+#myForm input[type="text"], #myForm input[type="float"], #myForm input[type="int"], #myForm input[type="email"], #myForm input[type="tel"] {
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input.smallInput{
+	 width: 25%;
+}
+
+
+#myForm select {
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+div.inputContainer{
+	width: 50%;
+}
+
+/**********************Table Starts***********************/
+.table {
+  display: table;
+  width: 100%;
+}
+
+.table-section {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.cell[rowspan="2"] {
+  grid-row: span 2;
+}
+
+.cell[colspan="2"] {
+  grid-column: span 2;
+}
+
+/**********************Table Ends***********************/
+
+
+/**************** jQuery tabs Ends *****************/
+ #tabs {
+      width: 95%;
+      margin: 20px auto;
+    }
+    #tabs ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #tabs li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    #tabs a {
+      text-decoration: none;
+      color: #000000;
+    }
+    #tabs a:hover {
+      color: #000000;
+    }
+    #tabs.active {
+      background-color: #337ab7;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .errorStyle {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        padding: 10px;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    .errorStyle h1 {
+        margin: 0;
+        font-weight: bold;
+    }
+        .successStyle {
+            background-color: #BFF4BE;
+            color: green;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        .successStyle h1 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+/**************** jQuery tabs Ends *****************/
+

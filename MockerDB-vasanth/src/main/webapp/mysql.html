@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MySQL Mock Data Populator</title>
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+    <script src="js/script.js"></script>
+     <link rel="stylesheet" href="css/style.css">-->
+     <script src="js/mysql.js"></script>
+</head>
+<body>
+<h1>MySQL Mock Data Populator</h1>
+  <form id="firstForm" class="myForm width40">
+
+		  <div class="table-form">
+		  <div class="row">
+		    <div class="cell">Database Name:</div>
+		    <div class="cell"><input type="text" id="database-name" name="database-name" value="test_dsb"></div>
+		    <div class="cell">Database Host</div>
+		    <div class="cell"><input class="width90 margin-left0" type="text" id="database-host" name="database-host" value="localhost:3306"></div>
+		  </div>
+		  <div class="row">
+		    <div class="cell">Database User Name</div>
+		    <div class="cell"><input type="text" id="database-user-name" name="database-user-name" value="root"></div>
+		    <div class="cell">Database Password</div>
+		    <div class="cell"><input type="password" id="database-password" name="database-password" value="vasa"></div>
+		  </div>
+		  <div class="row">
+		    <div class="cell">Database Table Name</div>
+		    <div class="cell" ><input type="text" class="width90 margin-left0" id="database-table-name" name="database-table-name" value=""></div>
+		    <div class="cell"><button id="submit-button">Submit</button></div>
+		  </div>
+		</div>
+	</form>
+	<p id="tableName"></p>
+    <form id="myForm" style="display:none;">
+        <!-- form fields will be populated here -->
+        <div class="table" id="tableDiv"></div>
+         <button  id="populate" type="submit" >Submit</button>
+		<button id="delete" type="submit"  >Delete</button>
+
+	</form>
+<div id="errorDiv"></div>
+</body>
+</html>

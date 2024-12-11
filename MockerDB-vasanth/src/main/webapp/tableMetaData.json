@@ -1,0 +1,31 @@
+[
+  {
+    "name": "urlid",
+    "type": "number",
+    "primary_key": true,
+    "default_value": "",
+    "nullable": "no"
+  },
+  {
+    "name": "monitor name",
+    "type": "text",
+    "primary_key": false,
+    "default_value": "",
+    "nullable": "yes"
+  },
+  {
+    "name": "ip address",
+    "type": "text",
+    "primary_key": false,
+    "default_value": "",
+    "nullable": "yes"
+  },
+  {
+    "name": "hidden monitor",
+    "type": "number",
+    "primary_key": false,
+    "default_value": "",
+    "nullable": "yes"
+  }
+]
+		

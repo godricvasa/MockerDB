@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  	<filter>
+	  <filter-name>ResFilter</filter-name>
+	  <filter-class>com.filter.ResponseFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	  <filter-name>ResFilter</filter-name> 
+	  <url-pattern>/app/*</url-pattern> 
+	</filter-mapping>
+	
+    <servlet>
+        <servlet-name>TableColumnsServlet</servlet-name>
+        <servlet-class>com.example.TableColumnsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TableColumnsServlet</servlet-name>
+        <url-pattern>/TableColumnsRest</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PopulateMockTableData</servlet-name>
+        <servlet-class>com.table.PopulateMockTableData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PopulateMockTableData</servlet-name>
+        <url-pattern>/app/populateMockData</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PopulateTableServlet</servlet-name>
+        <servlet-class>com.example.PopulateTableServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PopulateTableServlet</servlet-name>
+        <url-pattern>/PopulateTableRest</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>FetchMetaData</servlet-name>
+        <servlet-class>com.table.TableMetaData</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>FetchMetaData</servlet-name>
+        <url-pattern>/app/fetchMetaData</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CassandraTableMetaData</servlet-name>
+        <servlet-class>com.table.CassandraTableMetaData</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>CassandraTableMetaData</servlet-name>
+        <url-pattern>/app/fetchCassandraMetaData</url-pattern>
+    </servlet-mapping>
+    
+   <servlet>
+        <servlet-name>PopulateCassMockTableData</servlet-name>
+        <servlet-class>com.table.PopulateCassMockTableData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PopulateCassMockTableData</servlet-name>
+        <url-pattern>/app/populateCassMockData</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteMockData</servlet-name>
+        <servlet-class>com.table.deleteMockData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteMockData</servlet-name>
+        <url-pattern>/app/deleteMockData</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteCassMockData</servlet-name>
+        <servlet-class>com.table.deleteCassMockData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteCassMockData</servlet-name>
+        <url-pattern>/app/deleteCassMockData</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteDemo</servlet-name>
+        <servlet-class>com.table.DeleteMockData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteDemo</servlet-name>
+        <url-pattern>/app/DeleteDemo</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+		

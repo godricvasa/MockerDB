@@ -1,0 +1,123 @@
+22-Nov-2024 08:04:09.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.31
+22-Nov-2024 08:04:09.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2024 19:02:38 UTC
+22-Nov-2024 08:04:09.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.31.0
+22-Nov-2024 08:04:09.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+22-Nov-2024 08:04:09.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+22-Nov-2024 08:04:09.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Nov-2024 08:04:09.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\vasanth\.jdks\openjdk-22.0.2
+22-Nov-2024 08:04:09.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           22.0.2+9-70
+22-Nov-2024 08:04:09.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+22-Nov-2024 08:04:09.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\vasanth\Documents\ZohoContinue\MockerDB
+22-Nov-2024 08:04:09.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\vasanth\Documents\apache-tomcat-10.1.31
+22-Nov-2024 08:04:09.775 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Nov-2024 08:04:09.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+22-Nov-2024 08:04:09.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+22-Nov-2024 08:04:09.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+22-Nov-2024 08:04:09.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Nov-2024 08:04:09.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\vasanth\Documents\apache-tomcat-10.1.31
+22-Nov-2024 08:04:09.777 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\vasanth\Documents\ZohoContinue\MockerDB
+22-Nov-2024 08:04:09.777 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\vasanth\Documents\ZohoContinue\MockerDB\temp
+22-Nov-2024 08:04:09.777 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\vasanth\Documents\ZohoContinue\MockerDB\conf\logging.properties
+22-Nov-2024 08:04:09.778 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Nov-2024 08:04:09.778 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Users\vasanth\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\lib\idea_rt.jar=56940:C:\Users\vasanth\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin
+22-Nov-2024 08:04:09.778 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+22-Nov-2024 08:04:09.779 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+22-Nov-2024 08:04:09.779 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+22-Nov-2024 08:04:09.782 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+22-Nov-2024 08:04:09.792 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+22-Nov-2024 08:04:10.254 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:04:10.281 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [810] milliseconds
+22-Nov-2024 08:04:10.372 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Nov-2024 08:04:10.374 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.31]
+22-Nov-2024 08:04:10.399 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\vasanth\Documents\ZohoContinue\MockerDB\conf\Catalina\localhost\MockerDB.xml]
+22-Nov-2024 08:04:13.112 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more Filters failed to start. Full details will be found in the appropriate container log file
+22-Nov-2024 08:04:13.112 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/MockerDB] startup failed due to previous errors
+22-Nov-2024 08:04:13.126 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\vasanth\Documents\ZohoContinue\MockerDB\conf\Catalina\localhost\MockerDB.xml] has finished in [2,728] ms
+22-Nov-2024 08:04:13.130 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:04:13.153 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2870] milliseconds
+22-Nov-2024 08:05:23.856 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:05:23.861 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+22-Nov-2024 08:05:23.862 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:05:23.869 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:07:09.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.31
+22-Nov-2024 08:07:09.447 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2024 19:02:38 UTC
+22-Nov-2024 08:07:09.447 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.31.0
+22-Nov-2024 08:07:09.447 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+22-Nov-2024 08:07:09.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+22-Nov-2024 08:07:09.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Nov-2024 08:07:09.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\vasanth\.jdks\openjdk-22.0.2
+22-Nov-2024 08:07:09.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           22.0.2+9-70
+22-Nov-2024 08:07:09.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+22-Nov-2024 08:07:09.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth
+22-Nov-2024 08:07:09.449 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\vasanth\Documents\apache-tomcat-10.1.31
+22-Nov-2024 08:07:09.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Nov-2024 08:07:09.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+22-Nov-2024 08:07:09.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+22-Nov-2024 08:07:09.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+22-Nov-2024 08:07:09.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Nov-2024 08:07:09.466 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\vasanth\Documents\apache-tomcat-10.1.31
+22-Nov-2024 08:07:09.466 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth
+22-Nov-2024 08:07:09.466 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth\temp
+22-Nov-2024 08:07:09.466 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth\conf\logging.properties
+22-Nov-2024 08:07:09.466 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Nov-2024 08:07:09.466 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Users\vasanth\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\lib\idea_rt.jar=57000:C:\Users\vasanth\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin
+22-Nov-2024 08:07:09.466 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+22-Nov-2024 08:07:09.466 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+22-Nov-2024 08:07:09.467 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+22-Nov-2024 08:07:09.473 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+22-Nov-2024 08:07:09.497 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+22-Nov-2024 08:07:10.014 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:07:10.043 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [929] milliseconds
+22-Nov-2024 08:07:10.110 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Nov-2024 08:07:10.110 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.31]
+22-Nov-2024 08:07:10.125 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth\conf\Catalina\localhost\MockerDB-vasanth.xml]
+22-Nov-2024 08:07:12.927 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more Filters failed to start. Full details will be found in the appropriate container log file
+22-Nov-2024 08:07:12.927 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/MockerDB-vasanth] startup failed due to previous errors
+22-Nov-2024 08:07:12.938 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth\conf\Catalina\localhost\MockerDB-vasanth.xml] has finished in [2,812] ms
+22-Nov-2024 08:07:12.940 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:07:12.962 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2916] milliseconds
+22-Nov-2024 08:12:00.048 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:12:00.055 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+22-Nov-2024 08:12:00.056 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:12:00.065 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:12:01.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.31
+22-Nov-2024 08:12:01.894 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2024 19:02:38 UTC
+22-Nov-2024 08:12:01.894 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.31.0
+22-Nov-2024 08:12:01.894 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+22-Nov-2024 08:12:01.894 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+22-Nov-2024 08:12:01.894 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Nov-2024 08:12:01.894 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Users\vasanth\.jdks\openjdk-22.0.2
+22-Nov-2024 08:12:01.894 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           22.0.2+9-70
+22-Nov-2024 08:12:01.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+22-Nov-2024 08:12:01.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth
+22-Nov-2024 08:12:01.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\vasanth\Documents\apache-tomcat-10.1.31
+22-Nov-2024 08:12:01.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\vasanth\Documents\apache-tomcat-10.1.31
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth\temp
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth\conf\logging.properties
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Nov-2024 08:12:01.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Users\vasanth\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\lib\idea_rt.jar=57099:C:\Users\vasanth\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin
+22-Nov-2024 08:12:01.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+22-Nov-2024 08:12:01.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+22-Nov-2024 08:12:01.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+22-Nov-2024 08:12:01.909 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+22-Nov-2024 08:12:01.917 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+22-Nov-2024 08:12:02.317 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:12:02.345 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [714] milliseconds
+22-Nov-2024 08:12:02.416 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Nov-2024 08:12:02.416 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.31]
+22-Nov-2024 08:12:02.432 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth\conf\Catalina\localhost\MockerDB-vasanth.xml]
+22-Nov-2024 08:12:04.932 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more Filters failed to start. Full details will be found in the appropriate container log file
+22-Nov-2024 08:12:04.932 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [/MockerDB-vasanth] startup failed due to previous errors
+22-Nov-2024 08:12:04.952 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\vasanth\Documents\ZohoContinue\MockerDB-vasanth\conf\Catalina\localhost\MockerDB-vasanth.xml] has finished in [2,521] ms
+22-Nov-2024 08:12:04.957 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:12:04.986 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2639] milliseconds
+22-Nov-2024 08:16:06.617 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:16:06.622 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+22-Nov-2024 08:16:06.623 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+22-Nov-2024 08:16:06.628 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
